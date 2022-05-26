@@ -1,0 +1,517 @@
+/**
+Theme Name: entrance_childtheme
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: entrance_childtheme
+Template: astra
+*/
+
+/**
+Theme Name: child theme
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: child-theme
+Template: astra
+*/
+
+/* Fonts */
+@font-face {
+  font-family: 'biotif-extrabold';
+  src:  url('/Biotif-Font/Biotif-ExtraBold.woff') format('woff')
+        url('/Biotif-Font/Biotif-ExtraBold.woff2') format('woff2');
+  ;
+}
+
+
+/* Logo animation */
+
+.site-logo-img {
+  backface-visibility: visible !important;
+  animation: bounce-in-right 2s ease;
+  animation-delay: 1s;
+}
+
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ast-desktop .ast-primary-header-bar.main-header-bar {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 0;
+
+}
+
+.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
+  background: none;
+}
+
+.ast-primary-header-bar .site-primary-header-wrap {
+  padding: 0%;
+}
+
+.ast-theme-transparent-header #masthead {
+  position: relative;
+}
+
+body {
+  overflow-x: none !important;
+  background-color: #F0F4DD;
+}
+
+
+
+
+.ast-header-break-point #masthead .ast-primary-header-bar.main-header-bar {
+  padding: 0;
+  align-self: baseline;
+}
+
+element.style {
+  padding: 0vw;
+  margin: 0;
+}
+.ast-mobile-header-wrap
+  .ast-button-wrap
+  .menu-toggle.main-header-menu-toggle
+  #masthead
+  .ast-mobile-header-wrap
+  .ast-primary-header-bar {
+  padding: 0;
+  margin: 10vw;
+  height: 10vw;
+}
+
+
+.ast-separate-container #content .ast-container {
+  padding: 0vw;
+}
+.ast-mobile-header-wrap .ast-button-wrap .menu-toggle.main-header-menu-toggle {
+  margin: 0;
+}
+
+
+.menu-link {
+  color: white;
+}
+
+
+.arrow {
+  margin-left: 11vw;
+  position: relative;
+  top: 0;
+  margin-top: 0vw;
+  margin-bottom: 8vw;
+}
+.arrow_img {
+  width: 8vw;
+}
+
+.arrow_img svg {
+  fill: #2d00fb;
+}
+
+/* animation ved indlæsning */
+.boks {
+  background-color: #F0F4DD;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 300;
+  top: 0vw;
+}
+
+.animation {
+  display: block;
+  animation: animation_kf 4s ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation_kf {
+  0% {
+    transform: translateX(0vw);
+  }
+  20% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}
+
+.smiley {
+  z-index: 301;
+  width: 30vw;
+  position: absolute;
+  left: 35vw;
+  top: 35vh;
+}
+
+.logo_flip {
+  animation: logo_flip ease-in-out 1s;
+}
+
+@keyframes logo_flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
+
+.ast-separate-container #primary,
+.ast-separate-container.ast-left-sidebar #primary,
+.ast-separate-container.ast-right-sidebar #primary {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-family: montserrat, sans-serif;
+  color: #222222;
+  letter-spacing: normal;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+p {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  line-height: 140%;
+  color: #222222;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.ast-footer-copyright p {
+  color: #222222;
+}
+.site-below-footer-wrap[data-section="section-below-footer-builder"]  {
+  background-color: #E0F11F;
+  height: 25vh;
+}
+
+.elementor-45
+  .elementor-element.elementor-element-9c8fa9d
+  .elementor-toggle-title {
+  text-decoration: none;
+}
+
+/* Kompentencer  */
+
+.entry-content p {
+  margin: 0;
+}
+
+blockquote {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 2;
+  color: #2d00fb;
+  padding-left: 1vw;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 0.5em 1em 1.5em 0em;
+  padding: 1.2em;
+  line-height: inherit;
+  position: relative;
+  border-left: solid #2d00fb(0, 0, 0, 0.05);
+}
+
+[data-section="section-header-mobile-trigger"]
+  .ast-button-wrap
+  .mobile-menu-toggle-icon
+  .ast-mobile-svg {
+  width: 20px;
+  height: 20px;
+  fill: #2d00fb;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .ast-builder-grid-row {
+    height: 5vw;
+    margin-bottom: 0vw;
+  }
+  #gtranslate_wrapper {
+    position: relative;
+    top: 42px;
+    right: 1vw !important;
+    z-index: 999999;
+  }
+  .arrow {
+    margin-left: 11vw;
+    position: absolute;
+    top: 15vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+  }
+  .arrow_img {
+    width: 2vw;
+  }
+
+  .smiley {
+    z-index: 301;
+    width: 10vw;
+    position: absolute;
+    left: 45vw;
+    top: 40vh;
+  }
+
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* SLIDE SHOW */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  top: -11vh;
+  max-height: 80vh;
+}
+
+.slideshow-container img{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+
+#dot-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 15vh;
+
+
+}
+
+#dots {
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.client {
+  font-family: "Inter", sans-serif;
+  color: #f0f4dd;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
+  max-width: 40vw;
+  font-size: 3rem;
+  color: #f0f4dd;
+  line-height: 80%;
+}
+
+.director {
+  font-family: "Inter", sans-serif;
+  color: #f0f4dd;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+#info-container a {
+  font-family: "Inter", sans-serif;
+  color: #f0f4dd;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+#info-wrapper {
+  position: absolute;
+bottom: 10vh;
+  left: 7vw;
+  
+}
+
+#player-wrapper {
+
+    position: absolute;
+  bottom: 10vh;
+    right: 7vw;
+    
+    
+  
+}
+
+/* SECTION2 */
+
+#section2 {
+  position: relative;
+    bottom: 5vh;
+
+}
+
+.info-wrapper {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 40vw;
+}
+
+.info-container {
+  position: relative;
+left: 7vw;
+  align-items: center;
+  align-content: center;
+}
+
+.button-wrapper {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  justify-content: center;
+}
+
+.button-wrapper a {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-family: inter, sans-serif;
+  color: #222222;
+}
+
+.produkt-movies {
+  height: auto;
+  width: 50vw;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.produkt_container {
+  display: grid;
+grid-template-columns: 1fr 1fr;
+justify-items: center;
+width: 100vw;
+}
